@@ -9,6 +9,7 @@ c=list(map(int,Secondline.split()))
 a=list(map(int,Thirdline.split()))
 f=list(map(int,Fourthline.split()))
 m=list(map(int,Fifthline.split()))
+
 n = [0] * N
 
 def DP(N, m, n):
