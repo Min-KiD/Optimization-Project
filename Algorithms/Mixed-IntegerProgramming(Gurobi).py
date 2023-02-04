@@ -13,6 +13,8 @@ a=list(map(int,Thirdline.split()))
 f=list(map(int,Fourthline.split()))
 m=list(map(int,Fifthline.split()))
 
+n = [0] * N
+
 # Create a new model
 M = gp.Model()
 
