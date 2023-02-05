@@ -36,10 +36,10 @@ def sumFast(a, b):
 K = []
 
 maxx = DP(N, m, n)
-maxWay = K[0]
+maxL = K[0]
 for i in K:
     if sumFast(f, i) == maxx and sumFast(a, i) <= A and sumFast(c, i) <= C:
-        maxWay = i
+        maxL = i
         
 print('Optimized Sotion is: ' + str(maxL))
 print('With the profit is: ' + str(maxx))
