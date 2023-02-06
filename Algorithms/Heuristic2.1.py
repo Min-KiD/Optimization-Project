@@ -13,25 +13,25 @@ m=list(map(int,Fifthline.split()))
 check=[True]*N
 MaxProfit=0
 Answer=[0]*N
-while sum(check):
+while sum(check) and (N>0):
     Profit=[0]*N
     k=0
     for i in range(N):
         if check[i]==True:
             U=min(C//c[i],A//a[i])
-            if U>=m[i] :
+            if U<m[i]:
+                check[i]=False
+            else:
                 Profit[i]=U*f[i]
                 k+=1
-            else:
-                check[i]=False
     if k==0:
         break
     index=Profit.index(max(Profit))
-    U=int(min(C/c[index],A/a[index]))
-    C=C-c[index]*U
-    A=A-a[index]*U
-    Answer[index]+=U
-    MaxProfit+=max(Profit)
-    
+    C=C-c[index]*m[index]
+    A=A-a[index]*m[index]
+    Answer[index]+=m[index]
+    MaxProfit+=f[index]*m[index]
+    m[index]=1
+
 print('Optimized Sotion is: ' + str(Answer))
-print('With the profit is: ' + str(MaxProfit))
+print('With the profit is: ' + str(MaxProfit))    
