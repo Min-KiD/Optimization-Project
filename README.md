@@ -17,7 +17,7 @@ Description of our project:
 - The total area of the field is A
 
 Goal: the profit is the maximum and the total cost of production is less than or equal to a value of C
-For more details, please read in `Report.pdf`
+For more details, please read in `Report.pdf` or `Optimization.pptx`
 
 # How to run algorithm
 Create a text file for the input called `test.txt`, the input includes:
